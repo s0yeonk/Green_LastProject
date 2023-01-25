@@ -1,0 +1,165 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'SUIT', sans-serif;
+  background:#000;
+  color: white;
+}
+footer{
+  padding-bottom: 100px;
+}
+.footer_container{
+  display: grid;
+  grid-row-gap: 20px;
+  grid-template-areas: 
+  "About Open"
+  "Contact Map"
+  "News News"
+  "Sns Sns";
+}
+/* 1. Mobile First CSS */
+.logo{
+  margin-bottom: 50px;
+}
+.logo img{
+  margin-top: 1.875rem;
+  margin-left: 1.625rem;
+  width: 200px;
+}
+.title{
+  font-weight: bold;
+  font-size: 0.9375rem;
+  font-family: 'Helvetica','SUIT',sans-serif;
+  margin-bottom: 20px;
+}
+
+  /* About */
+.about_container{
+  grid-area: About;
+  width: 145px;
+  margin-left: 1.625rem;
+}
+.about_container ul li{
+  margin-bottom: 20px;
+  font-size: 12px;
+  list-style: none;
+}
+  /* Open */
+.open_container{
+  grid-area: Open;
+  margin-right: 1.625rem;
+}
+.open_container .open_hour{
+  width: 145px;
+}
+.open_container .open_hour div{
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+  /*Contact*/
+.Contact_container{
+  grid-area: Contact;
+  width: 145px;
+  margin-left: 26px;
+}
+.contact_content div{
+  margin-bottom: 12px;
+}
+.contact_content div{
+  font-size: 12px;
+  font-weight: 600;
+}
+  /*Map*/
+.map_container{
+  grid-area: Map;
+}
+.map_container .title{
+  margin-bottom: 10px;
+}
+.map_container .map_mobile{
+  font-size: 12px;
+  font-weight: 200;
+}
+.map_container div img{
+  display: none;
+}
+.map_container .map_desk{
+  display: none;
+} 
+/*News*/
+.newsletter_container{
+  grid-area: News;
+  margin-left: 1.625rem;
+  margin-right: 1.625rem;
+}
+.newsletter_container .news_title{
+  display: flex;
+  justify-content: space-between;
+}
+.newsletter_container .news_title div a{
+  font-size: 8px;
+  text-decoration: none;
+  color: #bbb;
+}
+.newsletter_container p{
+  font-size: 11px;
+}
+.newsletter_container div form input{
+  color: white;
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #fff;
+  text-align: left;
+  background-color: transparent;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+.newsletter_container div form input::placeholder{
+  color: #fff;
+  font-size: 11px;
+
+}
+.newsletter_container div form input:focus{
+  outline: none;
+  color: white;
+}
+.newsletter_container .news_sub{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.newsletter_container .news_sub div{
+  font-size: 10px;
+  margin-left: 4px;
+}
+/*Sns*/
+.sns_container{
+  grid-area: Sns;
+}
+.sns_container .title{
+  text-align: center;
+}
+.sns_container .sns_icons{
+  text-align: center;
+}
+.sns_container .sns_icons i{
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.copyright{
+  margin-top: 20px;
+  text-align: center;
+}
+.copyright p{
+  font-family: 'Helvetica','SUIT',sans-serif;
+  font-size: 12px;
+  margin-top: 12px;
+  font-weight: 400;
+}
