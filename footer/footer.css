@@ -55,9 +55,7 @@ footer{
   grid-area: Open;
   margin-right: 1.625rem;
 }
-.open_container .open_hour{
-  width: 31.2500vw;
-}
+
 .open_container .open_hour div{
   display: flex;
   justify-content: space-between;
