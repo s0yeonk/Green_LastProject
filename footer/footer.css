@@ -5,13 +5,11 @@ footer{
   font-family: 'SUIT', sans-serif;
   background:#000;
   color: white;
+  padding-bottom: 2vh;
+  height: 100%;
 }
 .copyright_desk{
   display: none;
-}
-footer{
-  padding-bottom: 2vh;
-  height: 100%;
 }
 .footer_container{
   display: grid;
@@ -36,7 +34,7 @@ footer{
 }
 .title{
   font-weight: bold;
-  font-size: 0.9375rem;
+  font-size: 3.7500vw;
   font-family: 'Helvetica','SUIT',sans-serif;
   margin-bottom: 20px;
 }
@@ -44,12 +42,12 @@ footer{
   /* About */
 .about_container{
   grid-area: About;
-  width: 145px;
+  width: 31.2500vw;
   margin-left: 1.625rem;
 }
 .about_container ul li{
   margin-bottom: 20px;
-  font-size: 12px;
+  font-size: 2.5000vw;
   list-style: none;
 }
   /* Open */
@@ -58,26 +56,26 @@ footer{
   margin-right: 1.625rem;
 }
 .open_container .open_hour{
-  width: 145px;
+  width: 31.2500vw;
 }
 .open_container .open_hour div{
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 2.5000vw;
   margin-bottom: 8px;
 }
 
   /*Contact*/
 .Contact_container{
   grid-area: Contact;
-  width: 145px;
+  width: 31.2500vw;
   margin-left: 26px;
 }
 .contact_content div{
   margin-bottom: 12px;
 }
 .contact_content div{
-  font-size: 12px;
+  font-size: 2.5000vw;
   font-weight: 600;
 }
   /*Map*/
@@ -88,7 +86,8 @@ footer{
   margin-bottom: 10px;
 }
 .map_container .map_mobile{
-  font-size: 12px;
+  font-size: 2.5000vw;
+  line-height: 1.8rem;
   font-weight: 200;
 }
 .map_container div img{
@@ -108,12 +107,12 @@ footer{
   justify-content: space-between;
 }
 .newsletter_container .news_title div a{
-  font-size: 8px;
+  font-size: 2.5000vw;
   text-decoration: none;
   color: #bbb;
 }
 .newsletter_container p{
-  font-size: 11px;
+  font-size: 2.5000vw;
 }
 .newsletter_container div form input{
   color: white;
@@ -129,7 +128,7 @@ footer{
 }
 .newsletter_container div form input::placeholder{
   color: #fff;
-  font-size: 11px;
+  font-size: 2.5000vw;
 
 }
 .newsletter_container div form input:focus{
@@ -142,7 +141,7 @@ footer{
   margin-top: 10px;
 }
 .newsletter_container .news_sub div{
-  font-size: 10px;
+  font-size: 2.5000vw;
   margin-left: 4px;
 }
 /*Sns*/
@@ -157,7 +156,7 @@ footer{
 }
 .sns_container .sns_icons i{
   margin-right: 12px;
-  font-size: 18px;
+  font-size: 4.8vw;
 }
 
 .copyright{
@@ -166,7 +165,7 @@ footer{
 }
 .copyright p{
   font-family: 'Helvetica','SUIT',sans-serif;
-  font-size: 12px;
+  font-size: 2.5000vw;
   margin-top: 12px;
   font-weight: 400;
 }
@@ -178,10 +177,10 @@ footer{
   .logo img{
     margin-top: 50px;
     margin-left: 60px;
-    width: 250px;
+    width: 32.5521vw;
   }
   .title{
-    font-size: 20px;
+    font-size: 2.3438vw;
     margin-bottom: 22px;
   }
   .footer_container{
@@ -192,6 +191,7 @@ footer{
     "News News News"
     "Sns Sns Sns"
   }
+  .Contact_container{width: 100%;}
   .open_container{
     margin-left:60px;
   }
@@ -199,16 +199,16 @@ footer{
     width: 100%;
   }
   .open_container .open_hour div{
-    font-size: 16px;
+    font-size: 2.0833vw;
   }
   .about_container ul li{
-    font-size: 16px;
+    font-size: 2.0833vw;
     width: 100%;
   }
   .contact_content div{
-    font-size: 16px;
+    font-size: 2.0833vw;
   }
-
+  .about_container{width: 100%;}
   /*Map*/
   .map_container{
     display: grid;
@@ -224,7 +224,7 @@ footer{
     margin-left: 60px;
   }
   .map_container .map_img img{
-    width: 260px;
+    width: 33.8542vw;
     display: block;
     border-radius: 6px;
   }
@@ -233,12 +233,12 @@ footer{
   }
   .map_container div .map_desk{
     display: block;
-    font-size: 16px;
-    margin-bottom: 50px;
+    font-size: 2.0833vw;
+    margin-bottom: 0;
   }
   .map_desk .sns_icons i{
     margin-right: 24px;
-    font-size: 20px;
+    font-size: 2.6042vw;
     cursor: pointer;
   }
   .map_mobile{display: none;}
@@ -247,27 +247,28 @@ footer{
     margin-right: 100px;
   }
   .newsletter_container .news_title div a{
-    font-size:15px;
+    font-size:1.953125vw;
   }
   .newsletter_container p{
-    font-size:18px
+    font-size:2.34375vw;
   }
   .newsletter_container div form input::placeholder{
     color: #fff;
-    font-size: 20px;
+    font-size: 2.60416667vw;
   }
   .newsletter_container div form input{
     /* margin-t/op:2px; */
     padding-top: 20px;
   }
   .newsletter_container .news_sub div{
-    font-size:18px;
+    font-size:2.34375vw;
   }
   .copyright p{
-    font-size: 15px;
+    font-size: 1.9353125vw;
     margin-top: 12px;
     font-weight: 400;
   }
+  .sns_container{display: none;}
 }
 
 /* 가로해상도 1024px 이상_Desktop */
@@ -277,17 +278,29 @@ footer{
 
 /* 가로해상도 1024px 이상_Desktop */
 @media (min-width:1280px){
+  .contact_content div{
+    font-size: 0.9375vw;
+  }
+  .Contact_container{
+    width: 100%;
+  }
+  .about_container{
+    width: 100%;
+  }
+  .open_container .open_hour{
+    width: 90%;
+  }
   .copyright_desk{
     display: block;
     margin-top: 100px;
   }
   .copyright_desk p{
-    font-size: 14px;
+    font-size: 1.09375vw;
     margin-bottom: 15px;
   }
   *{overflow-x: hidden;}
   .title{
-    font-size: 1.25rem;
+    font-size: 1.25vw;
   }
   .logo{
     margin-top: 8vh;
@@ -295,7 +308,7 @@ footer{
   }
   .logo img{
     margin-left: 0;
-    width: 330px;
+    width: 18.7500vw;
     margin-bottom: 20%;
   }
   .newsletter_desk_container{
@@ -325,7 +338,7 @@ footer{
   color: #bbb;
 }
 .newsletter_desk_container p{
-  font-size: 16px;
+  font-size: 0.9375vw;
 }
 .newsletter_desk_container div form input{
   color: white;
@@ -341,7 +354,7 @@ footer{
 }
 .newsletter_desk_container div form input::placeholder{
   color: #fff;
-  font-size: 18px;
+  font-size: 0.9375vw;
 
 }
 .newsletter_container div form input:focus{
@@ -354,7 +367,7 @@ footer{
   margin-top: 10px;
 }
 .newsletter_desk_container .news_sub div{
-  font-size: 16px;
+  font-size: 1.25vw;
   margin-left: 4px;
 } 
 .footer_container{
@@ -366,10 +379,10 @@ footer{
   margin-left: 0;
 }
 .open_container .open_hour div{
-  font-size: 16px;
+  font-size: 0.9375vw;
 }
 .about_container ul li{
-  font-size: 16px;
+  font-size: 0.9375vw;
   cursor: pointer;
   margin-bottom: 14px;
 }
@@ -378,14 +391,18 @@ footer{
   margin-right: 10px;
 }
 .map_container .map_img img{
-  width: 200px;
+  width: 15.6250vw;
 }
 .map_container .title{
   margin-top: 2vh;
 }
 .map_container div .map_desk{
   margin-bottom: 2vh;
+  font-size: 1.0417vw;
 }
 .sns_container{display: none;}
 .copyright{display: none;}
+.map_desk .sns_icons i{
+  font-size: 1.5625vw;
+}
 }
