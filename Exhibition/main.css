@@ -1,15 +1,3 @@
-@font-face {
-  font-family: 'GmarketSansMedium';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-html,body{
-  max-width: 100%;
-}
-body{
-  width: 100%;
-}
 :root{
   --white:#fff;
   --black:#000;
@@ -17,96 +5,34 @@ body{
   --main-orange:#FF7A2F;
   --main-gray:#D9D9D9;
 }
-/* 스와이퍼 */
-.swiper {
-  background: rgb(255, 255, 255,.8);
-  border-radius: 10px;
-  backdrop-filter: blur(14px);
-}
-
-.swiper-slide{
-  background-position: center;
-  background-size: cover;
-  margin: 10px;
-  border-radius: 10px;
-  /* background: #a3a3a3; */
-  display: flex;
-  align-items: center;
-  transition: .3s linear;
-}
-
-.swiper-slide .container{
-  width: 62.5000vw;
-}
-.swiper_poster img{
-  width: 100%;
-}
-.swiper-slide .container h1{
-  background-color: rgb(12, 19, 29);
-  padding: 10px;
-  width: 150px;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(255, 111, 123);
-  border-radius: 10px;
-  font-size: 70px;
-}
-.swiper_title{
-  margin-top: 2.2vh;
-}
-.swiper_maintitle{
-  font-size: 5vw;
-}
-.swiper_maintitle :first-child{
-  margin-bottom: 0.1vh;
-}
-.swiper_maintitle :first-child{
-  font-size: 5.6250vw;
-  font-family: 'GmarketSansMedium';
-  font-weight: 600;
-}
-.swiper_maintitle{
-  margin-bottom: 1.4vh;
-}
-.swiper_title button{
-  font-size: 4.6875vw;
-  background: var(--main-orange);
-  border:none;
-  border-radius: 5px;
-  padding-left: 3.1250vw;
-  padding-right: 3.1250vw;
-  padding-top: 0.6vh; padding-bottom: 0.6vh;
-}
-:root{
-  --swiper-theme-color:rgb(255,111,123);
-}
-
-/*    끝!  */
-.center{
-  text-align: center;
-}
-.Bebas{font-family: 'Bebas Neue', cursive; }
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'SUIT', sans-serif;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.center{text-align: center;}
+.Bebas{font-family: 'Bebas Neue', cursive; }
 a{color: white;}
 
 
 /* 1. Mobile First CSS */
-  /* 1-1. header CSS */
+
+  /* 1. 헤더 */
   .desk_search{display: none;}
   .content__title{
     margin-top: 35px;
     font-size: 12.5000vw;
   }
 
-  /* MENU */
+  /* 2. 슬라이딩 메뉴 */
   .slide_logo{
     width: 37.1875vw;
   }
@@ -238,7 +164,7 @@ a{color: white;}
     font-size: 3.1250vw;
   }
   
-  /* 첫번째 섹션 _ 현재전시 */
+  /* 3. 현재전시 */
   .nowEx_title{
     margin-top: 6.34vh;
     margin-bottom: 4.58vh;
@@ -259,8 +185,41 @@ a{color: white;}
   .v-none{
     display: none;
   }
-
-  /* VOTE */
+  /* 스와이퍼 */
+  .swiper {
+    width: 100vw;
+    padding-left: 5vw;
+  }
+  .swiper-wrapper{
+    overflow: visible;
+  }
+  .swiper-wrapper div{
+    width: 62.5000vw;
+  }
+  .now_poster img{
+    width: 62.5000vw;
+  }
+  .now_maintitle{
+    font-size: 5vw;
+    margin-bottom: 1.4vh;
+  }
+  .now_maintitle :first-child{
+    font-size: 5.6250vw;
+    font-family: 'GmarketSansMedium';
+    font-weight: 600;
+    margin-bottom: 0.1vh;
+  }
+  .now_title button{
+    font-size: 4.6875vw;
+    background: var(--main-orange);
+    border:none;
+    border-radius: 5px;
+    padding-left: 3.1250vw;
+    padding-right: 3.1250vw;
+    padding-top: 0.6vh; padding-bottom: 0.6vh;
+  }
+  /*끝 */
+  /* 4. 투표 */
   .third__container{width: 100%;}
   .vote__wrapper{
     width:80%;
@@ -482,28 +441,27 @@ a{color: white;}
   }
   
   /* 현재전시 */
+  .swiper{
+    padding-left: 2.6042vw;
+  }
   .nowEx_title{
     font-size: 4.6875vw;
     margin-left: 2.6042vw;
     margin-bottom: 2vh;
   }
-  .swiper-slide .container{
-    width: 45.5729vw;
+  .swiper-wrapper div{
+    font-size: 3.2552vw;
+    width: 45.0625vw;
   }
-  .swiper_maintitle{
-    font-size: 3vw;
+  .now_poster img{
+    width: 45.0625vw;
   }
-  .swiper_title button{
-    font-size: 2.6042vw;
+  .now_maintitle :first-child{
+    font-size: 4.2552vw;
   }
-  .swiper_maintitle{
-    margin-bottom: 2vh;
+  .now_title button{
+    font-size: 3.2552vw;
   }
-  .swiper_maintitle :first-child{
-    margin-bottom: 1vh;
-    font-size: 3.3552vw;
-  }
-
   /*아코디언*/
   .acc_title{padding-left: 2.6042vw;}
   .accordion{
@@ -529,12 +487,6 @@ a{color: white;}
   .content__title{
     margin-top: 40px;
     font-size: 5.2083vw;
-  }
-  header .main__poster{
-    width: 100%;
-    height: 895px;
-    background:url('/image/KakaoTalk_Photo_2023-01-19-17-34-18.png') no-repeat;
-    background-size: cover;
   }
   .content__title{
     font-size: 100px;
@@ -599,9 +551,8 @@ a{color: white;}
   }
 
   /* 현재전시 */
-  .first_flex{
-    display: flex;
-    align-items: flex-end;
+  .Exhibition_container{
+    margin-top: 8vh;
   }
   .nowEx_title{
     margin-left: 0;
@@ -609,14 +560,41 @@ a{color: white;}
     display: flex;
     flex-direction: column;
     font-size: 2.6042vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
-  .first__container{
-    width: 100vw;
+  .nowBtn{
+    width: 10.4167vw;
+    padding-bottom: 2vh;
+  }
+  .nowEx_title :nth-child(3){
+    padding-bottom: 6vh;
+  }
+  #Now_Exhibition{
+    display: flex;
   }
   .swiper{
-    width: 100vw;
+    padding-left: 0;
+    width: 100%;
   }
-
+  .now_poster img{
+    width: 20.8333vw;
+  }
+  .swiper-wrapper div{
+    width: 20.8333vw;
+    font-size: 1.3021vw;
+  }
+  .now_maintitle :first-child{
+    font-size: 1.93021vw;
+  }
+  .now_title button{
+    font-size: 1.3021vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    border-radius: 17px;
+    font-weight: 600;
+  }
   /*아코디언*/
   .acc_title{padding-left: 1.3021vw;}
   .accordion{

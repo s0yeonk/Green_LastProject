@@ -43,25 +43,20 @@
       })
     }
     //스와이퍼 
-  const swiper = new Swiper('.swiper', {
-    slidesPerView:1.5,
-    spaceBetween:10,
-    effect:"slider",
-    // loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-    },
-    breakpoints:{
-      768:{
-        slidesPerView:2.5,
-        spaceBetween:12,
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: "auto",
+      spaceBetween:10,
+      pagination: {
+        el: '.swiper-pagination',
       },
-      1280:{
-        slidesPerView:3,
-        spaceBetween:10,
+      breakpoints:{
+        768:{
+          spaceBetween:20,
+        },
+        1280:{
+        }
       }
-    }
-  });
+    });
 
   const searchIcon=document.querySelector('.search');
   const slideSearch=document.querySelectorAll('.search__slide');
