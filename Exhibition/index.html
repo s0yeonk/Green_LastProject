@@ -5,19 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <!-- 스와이퍼 cdn -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-  <!--폰트-->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
   <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
-  <link rel="stylesheet" href="./main.css">
-  <link rel="stylesheet" href="/header/header.css">
-  <link rel="stylesheet" href="/footer/footer.css">
+  <link rel="stylesheet" href="/CSS/main.css">
+  <link rel="stylesheet" href="/CSS/header.css">
+  <link rel="stylesheet" href="/CSS/footer.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');/* 폰트 */
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
   </style>
 </head>
 <body>
-<!-- header Section -->
+  <!-- header -->
   <header>
     <div class="header_first">
       <div class="header__logo">
@@ -26,9 +27,53 @@
       <div class="header__icons">
         <div class="search">
           <i class="fa-solid fa-magnifying-glass search_icon"></i>
-          <i class="fa-solid fa-x"></i>
+          <!-- <i class="fa-solid fa-x"></i> -->
         </div>
-        <div class="menu"><i class="fa-solid fa-bars"></i></div>
+        <div id="menuBtn"><i class="fa-solid fa-bars"></i></div>
+      </div>
+    </div>
+    <div class="slide-menu">
+      <div class="slide-left">
+        <div class="slide-menu__top">
+          <div>
+            <img class="slide_logo" src="/image/로고/logo_W.svg" alt="">
+          </div>
+          <span class="slide-menu__close Bebas">close</span>
+        </div>
+        <div class="slide-menu__search_mb">
+          <form class="slide-menu__form">
+            <input type="text" placeholder="검색어를 입력하세요">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+        <div class="slide-menu__poster">
+          <div class="slide_poster">
+            <img src="/image/포스터/이배/이배포스터(세로).png" alt="">
+          </div>
+          <div class="slide_tag">
+            <div>#이배</div>
+            <div>#다니엘뷔렌</div>
+            <div>#정다혜</div>
+            <div>#히토</div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-right">
+        <span class="slide-menu__close_pc Bebas">close</span>
+        <div class="slide-menu__menu slide-on">
+          <ul>
+            <li style="margin-top: 1.5625rem;"><a href="#">전시</a></li>
+            <li><a href="#">교육 및 행사</a></li>
+            <li><a href="#">소장자료</a></li>
+            <li><a href="#">커뮤니티/소식</a></li>
+            <li><a href="#">미술관소개</a></li>
+            <li><a href="#">온라인스토어</a></li>
+          </ul>
+        </div>
+        <div class="slid-menu__num">
+          <div>+82 53 803 7900</div>
+          <div>+82 53 803 7859</div>
+        </div>
       </div>
     </div>
     <div class="desk_search">
@@ -48,20 +93,203 @@
       </div>
     </div>
   </header>
-<!-- header END -->
+  <!-- header END -->
 
   <!-- 현재전시 :슬라이드-->
   <div class="first__container">
-    <div>
-      <div>
-        <div class="Bebas">WHAT'S ON</div>
-        <div class="Bebas">EVENTS</div>
-        <div class="Bebas">ALL</div>
+    <div class="first_flex">
+      <div class="nowEx_title">
+        <div class="nowBtn Bebas" data-view="A">WHAT'S ON</div>
+        <div class="nowBtn Bebas" data-view="B">EVENTS</div>
+        <div class="nowBtn Bebas" data-view="C">ALL</div>
       </div>
       <div>
-        <div class="on__content"></div>
-        <div class="event__content"></div>
-        <div class="all"></div>
+        <div class="on__content view-List" data-view="A">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="container">
+                  <div class="swiper_poster">
+                    <img src="/image/포스터/다니엘뷔렌.png" alt="">
+                  </div>
+                  <div class="swiper_title">
+                    <div class="swiper_maintitle">
+                      <div>다니엘뷔렌</div>
+                      <div>2022.07.12-2023.02.28</div>
+                    </div>
+                    <button>더보기</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="container">
+                  <div class="swiper_poster">
+                    <img src="/image/포스터/이배/이배포스터(세로).png" alt="">
+                  </div>
+                  <div class="swiper_title">
+                    <div class="swiper_maintitle">
+                      <div>이배</div>
+                      <div>2023.02.13-2023.04.27</div>
+                    </div>
+                    <button>더보기</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="container">
+                  <div class="swiper_poster">
+                    <img src="/image/포스터/정광호/정광호.jpg" alt="">
+                  </div>
+                  <div class="swiper_title">
+                    <div class="swiper_maintitle">
+                      <div>정광호_비조각적 조각</div>
+                      <div>2023.02.04-2023.04.03</div>
+                    </div>
+                    <button>더보기</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="container">
+                  <div class="swiper_poster">
+                    <img src="/image/포스터/다니엘뷔렌.png" alt="">
+                  </div>
+                  <div class="swiper_title">
+                    <div class="swiper_maintitle">
+                      <div>다니엘뷔렌</div>
+                      <div>2022.07.12-2023.02.28</div>
+                    </div>
+                    <button>더보기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="event__content view-List v-none" data-view="B">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" style="width: 100%;">
+                <div class="container">
+                  <div class="swiper_poster">
+                    <img src="/image/포스터/다니엘뷔렌.png" alt="">
+                  </div>
+                  <div class="swiper_title">
+                    <div class="swiper_maintitle">
+                      <div>다니엘뷔렌</div>
+                      <div>2022.07.12-2023.02.28</div>
+                    </div>
+                    <button>더보기</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="width: 100%;">
+                <div class="container">
+                  <div class="swiper_poster">
+                    <img src="/image/포스터/이배/이배포스터(세로).png" alt="">
+                  </div>
+                  <div class="swiper_title">
+                    <div class="swiper_maintitle">
+                      <div>이배</div>
+                      <div>2023.02.13-2023.04.27</div>
+                    </div>
+                    <button>더보기</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="width: 100%;">
+                <div class="container">
+                  <div class="swiper_poster">
+                    <img src="/image/포스터/정광호/정광호.jpg" alt="">
+                  </div>
+                  <div class="swiper_title">
+                    <div class="swiper_maintitle">
+                      <div>정광호_비조각적 조각</div>
+                      <div>2023.02.04-2023.04.03</div>
+                    </div>
+                    <button>더보기</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="width: 100%;">
+                <div class="container">
+                  <div class="swiper_poster">
+                    <img src="/image/포스터/다니엘뷔렌.png" alt="">
+                  </div>
+                  <div class="swiper_title">
+                    <div class="swiper_maintitle">
+                      <div>다니엘뷔렌</div>
+                      <div>2022.07.12-2023.02.28</div>
+                    </div>
+                    <button>더보기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="all view-List v-none" data-view="C">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" style="width: 100%;">
+                <div class="container">
+                  <div class="swiper_poster">
+                    <img src="/image/포스터/다니엘뷔렌.png" alt="">
+                  </div>
+                  <div class="swiper_title">
+                    <div class="swiper_maintitle">
+                      <div>다니엘뷔렌</div>
+                      <div>2022.07.12-2023.02.28</div>
+                    </div>
+                    <button>더보기</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="width: 100%;">
+                <div class="container">
+                  <div class="swiper_poster">
+                    <img src="/image/포스터/이배/이배포스터(세로).png" alt="">
+                  </div>
+                  <div class="swiper_title">
+                    <div class="swiper_maintitle">
+                      <div>이배</div>
+                      <div>2023.02.13-2023.04.27</div>
+                    </div>
+                    <button>더보기</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="width: 100%;">
+                <div class="container">
+                  <div class="swiper_poster">
+                    <img src="/image/포스터/정광호/정광호.jpg" alt="">
+                  </div>
+                  <div class="swiper_title">
+                    <div class="swiper_maintitle">
+                      <div>정광호_비조각적 조각</div>
+                      <div>2023.02.04-2023.04.03</div>
+                    </div>
+                    <button>더보기</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="width: 100%;">
+                <div class="container">
+                  <div class="swiper_poster">
+                    <img src="/image/포스터/다니엘뷔렌.png" alt="">
+                  </div>
+                  <div class="swiper_title">
+                    <div class="swiper_maintitle">
+                      <div>다니엘뷔렌</div>
+                      <div>2022.07.12-2023.02.28</div>
+                    </div>
+                    <button>더보기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -71,19 +299,7 @@
   <div class="second__container">
     <div class="content__title Bebas center">UPCOMING!</div>
     <div class="upcoming__content">
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          ...
-        </div>
 
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
-      </div>
     </div>
   </div>
   <!-- 예정전시 END -->
@@ -91,20 +307,28 @@
   <!-- 작품투표공간 -->
   <div class="third__container">
     <div class="third__content__title">
-      <div class="content__title Bebas center">WHAT DO YOU WANT TO SEE NEXT?</div>
+      <div class="content__title Bebas center">WHAT DO YOU<br> WANT TO SEE NEXT?</div>
       <div class="content__subtitle center">다음 시즌 대구미술관에서 보고싶은 작품을 투표해주세요!</div>
     </div>
-    <div class="vote__container">
-      <div class="vote__one"></div>
-      <div class="vote__two"></div>
-      <div class="vote__three"></div>
+    <div class="vote__wrapper">
+      <div class="vote__container">
+        <div class="vote__one">
+          <img src="/image/vote/김준수1.png" alt="">
+        </div>
+        <div class="vote__two">
+          <img src="/image/vote/박서희도예가.png" alt="">
+        </div>
+        <div class="vote__three">
+          <img src="/image/vote/나혜석.png" alt="">
+        </div>
+      </div>
     </div>
   </div>
   <!-- 작품투표공간 END -->
 
   <!-- 아카이브 :아코디언 -->
   <div class="four__container">
-    <div class="content__title Bebas">DAEGU ART MUSEUM'S<br> ARCHIVE</div>
+    <div class="content__title Bebas acc_title">DAEGU ART MUSEUM'S<br> ARCHIVE</div>
     <div class="accodion_menu">
       <button class="accordion Bebas">2022</button>
       <div class="panel">
@@ -578,7 +802,7 @@
             <div class="archive_poster"></div>
           </div>
       </div>
-      <button class="accordion Bebas">ALL</button>
+      <button class="accordion Bebas" onclick="location.href='#'">ALL</button>
     </div>
     </div>
   </div>
@@ -587,13 +811,11 @@
   <!-- Footer -->
   <footer id="footer"></footer>
   <!-- footer END -->
-
 </body>
-<!-- 스와이퍼 CDN -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<!-- 폰트어썸 CDN -->
 <script src="https://kit.fontawesome.com/a5b9adde5a.js" crossorigin="anonymous"></script>
 <script src="./main.js"></script>
 <!-- <script src="/header/header.js"></script> -->
 <script src="/footer/footer.js"></script>
 </html>
+
