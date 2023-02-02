@@ -206,8 +206,17 @@ a{color: white;}
   .nowEx_title div{
     margin-right: 3.7500vw;
   }
-  .nowEx_title div:hover{
-    color: #000;
+  .nowBtn::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 10px;
+    background: var(--main-orange);
+  }
+  .nowBtn:hover::after{
+    width: 100%;
+    transition: width .3s;
+    color: black;
   }
   .now_checked{
     color: black;
@@ -700,6 +709,21 @@ a{color: white;}
     padding-right: 2.5vw;
     border-radius: 17px;
     font-weight: 600;
+  }
+  .nowBtn:nth-child(1):hover::after{
+    width: 80%;
+    transition: width .3s;
+    color: black;
+  }
+  .nowBtn:nth-child(2):hover::after{
+    width: 60%;
+    transition: width .3s;
+    color: black;
+  }
+  .nowBtn:nth-child(3):hover::after{
+    width: 30%;
+    transition: width .3s;
+    color: black;
   }
   /*아코디언*/
   .acc_title{padding-left: 1.3021vw;}
