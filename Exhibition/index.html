@@ -18,20 +18,34 @@
   </style>
 </head>
 <body>
+  <!-- 모바일 Nav-->
+  <div class="sticky_menu">
+    <div class="sticky_left">
+      <ul>
+        <li><span class="Bebas" id="menuBtn2">MENU</span></li>
+        <li><a href="#" class="Bebas">HOME</a></li>
+      </ul>
+    </div>
+    <div class="sticky_right">
+      <a href="#" class="Bebas">STORE</a>
+    </div>
+  </div>
+
   <!-- header -->
   <header>
-    <div class="header_first">
+    <div class="header_container">
       <div class="header__logo">
-        <img src="/image/로고/logo_B.svg" alt="">
+        <img src="/image/로고/logo.png" alt="">
       </div>
       <div class="header__icons">
         <div class="search">
           <i class="fa-solid fa-magnifying-glass search_icon"></i>
-          <!-- <i class="fa-solid fa-x"></i> -->
+          <!-- <i class="fa-solid fa-x"></i>  -->
         </div>
-        <div id="menuBtn"><i class="fa-solid fa-bars"></i></div>
-      </div>
+        <div id="menuBtn_pc"><i class="fa-solid fa-bars"></i></div>
+      </div> 
     </div>
+    <!-- 슬라이드 메뉴-->
     <div class="slide-menu">
       <div class="slide-left">
         <div class="slide-menu__top">
@@ -84,10 +98,11 @@
           </div>
         <div class="slide_tag_container">
           <ul>
+            <li>#현재 전시</li>
             <li>#히토 슈타이얼</li>
-            <li>#이배</li>
+            <li>#숯의작가 이배</li>
             <li>#다니엘뷔렌</li>
-            <li>#정다혜</li>
+            <li>#비조각적 조각</li>
           </ul>
         </div>
       </div>
@@ -105,7 +120,7 @@
       </div>
       <div>
         <div class="on__content view-List" data-view="A">
-          <div class="swiper">
+          <div class="swiper first-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="now_poster">
@@ -137,7 +152,7 @@
                 </div>
                 <div class="now_title">
                   <div class="now_maintitle">
-                    <div>이배</div>
+                    <div>숯의 작가 이배</div>
                     <div>2023.02.13-2023.04.27</div>
                   </div>
                   <button>더보기</button>
@@ -159,7 +174,7 @@
           </div>
         </div>
         <div class="event__content view-List v-none" data-view="B">
-          <div class="swiper">
+          <div class="swiper first-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="now_poster">
@@ -213,7 +228,7 @@
           </div>
         </div>
         <div class="all view-List v-none" data-view="C">
-          <div class="swiper">
+          <div class="swiper first-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="now_poster">
@@ -270,18 +285,31 @@
     </div>
   </div>
   <!-- 슬라이드 END -->
-
   <!-- 예정전시 :호버-->
-  <div class="Upcoming_container">
+  <div class="Upcoming_container ct_margin">
     <div class="content__title Bebas center">UPCOMING!</div>
     <div class="upcoming__content">
-
+      <div class="swiper second-swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper upcoming-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide upcoming-item">
+            <img src="/image/포스터/키시오스가_예정/키시오스가.jpg" alt="">
+          </div>
+          <div class="swiper-slide upcoming-item">
+            <img src="/image/포스터/키시오스가_예정/키시오스가.jpg" alt="">
+          </div>
+          <div class="swiper-slide upcoming-item">
+            <img src="/image/포스터/키시오스가_예정/키시오스가.jpg" alt="">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- 예정전시 END -->
 
   <!-- 작품투표공간 -->
-  <div class="third__container">
+  <div class="third__container ct_margin">
     <div class="third__content__title">
       <div class="content__title Bebas center">WHAT DO YOU<br> WANT TO SEE NEXT?</div>
       <div class="content__subtitle center">다음 시즌 대구미술관에서 보고싶은 작품을 투표해주세요!</div>
@@ -289,13 +317,13 @@
     <div class="vote__wrapper">
       <div class="vote__container">
         <div class="vote__one">
-          <img src="/image/vote/김준수1.png" alt="">
+          <img src="/image/vote/나혜석.png" alt="">
         </div>
         <div class="vote__two">
           <img src="/image/vote/박서희도예가.png" alt="">
         </div>
         <div class="vote__three">
-          <img src="/image/vote/나혜석.png" alt="">
+          <img src="/image/vote/김준수1.png" alt="">
         </div>
       </div>
     </div>
@@ -303,7 +331,7 @@
   <!-- 작품투표공간 END -->
 
   <!-- 아카이브 :아코디언 -->
-  <div class="four__container">
+  <div class="four__container ct_margin">
     <div class="content__title Bebas acc_title">DAEGU ART MUSEUM'S<br> ARCHIVE</div>
     <div class="accodion_menu">
       <button class="accordion Bebas">2022</button>
@@ -785,6 +813,7 @@
   <!-- 아카이브 END -->
 
   <!-- Footer -->
+
   <footer id="footer"></footer>
   <!-- footer END -->
 </body>

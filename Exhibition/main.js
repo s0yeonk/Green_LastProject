@@ -1,11 +1,21 @@
+
 (function(){
   'use strict'
 
   // 슬라이딩 메뉴
   document.addEventListener("DOMContentLoaded",function(){
-    const $menuBtn=document.querySelector('#menuBtn');
+    const $menuBtn=document.querySelector('#menuBtn2');
+    console.log($menuBtn)
     const $menuContain=document.querySelector('.slide-menu');
     $menuBtn.addEventListener('click',()=>{
+      if($menuContain.classList.contains('slide-on')){
+        $menuContain.classList.remove('slide-on');
+      }else{
+        $menuContain.classList.add('slide-on')
+      }
+    })
+    const $menuBtnPc=document.querySelector('#menuBtn_pc');
+    $menuBtnPc.addEventListener('click',()=>{
       if($menuContain.classList.contains('slide-on')){
         $menuContain.classList.remove('slide-on');
       }else{
@@ -43,7 +53,7 @@
       })
     }
     //스와이퍼 
-    const swiper = new Swiper('.swiper', {
+    const swiper1 = new Swiper('.first-swiper', {
       slidesPerView: "auto",
       spaceBetween:10,
       pagination: {
@@ -51,19 +61,59 @@
       },
       breakpoints:{
         768:{
-          spaceBetween:20,
+          spaceBetween:30,
         },
         1280:{
+          spaceBetween:25,
         }
       }
     });
 
-  const searchIcon=document.querySelector('.search');
-  const slideSearch=document.querySelectorAll('.search__slide');
-  searchIcon.addEventListener('click',()=>{
-    slideSearch.classList.toggle('active')
-  })
+// var ww = window.innerWidth;
+// var swiper2 = undefined;
+
+// function initSwiper() {
+//   if (ww < 768 && swiper2 == undefined) {
+//     const swiper2 = new Swiper('.second-swiper', {
+//       slidesPerView: "auto",
+//       spaceBetween:12,
+//       pagination: {
+//         el: '.swiper-pagination',
+//       }
+//     });
+//   } else if (ww >= 768 && swiper2 != undefined) {
+//     swiper2.destroy();
+//     swiper2 = undefined;
+//   }
+// }
+
+// initSwiper();
+
+// $(window).on('resize', function () {
+//   ww = $(window).width();
+//   initSwiper();
+// });
+
+//     // const swiper2 = new Swiper('.second-swiper', {
+//     //   slidesPerView: "auto",
+//     //   spaceBetween:12,
+//     //   pagination: {
+//     //     el: '.swiper-pagination',
+//     //   }
+//     // });
+
+  // const searchIcon=document.querySelector('.search');
+  // const slideSearch=document.querySelectorAll('.search__slide');
+  // searchIcon.addEventListener('click',()=>{
+  //   slideSearch.classList.toggle('active')
+  // })
   
+    const searchIcon=document.querySelector('.search');
+    const slideSearch=document.querySelector('.desk_search');
+    searchIcon.addEventListener('click',()=>{
+      slideSearch.classList.toggle('active_search');
+    })
+
   //아카이브 _ 아코디언
   let accordion=document.getElementsByClassName('accordion')
   for(let i=0;i<accordion.length;i++){
