@@ -1,3 +1,7 @@
+html,body{
+  height: 100%;
+}
+
 :root{
   --white:#fff;
   --black:#000;
@@ -5,6 +9,7 @@
   --main-orange:#FF7A2F;
   --main-gray:#D9D9D9;
 }
+
 .ct_margin{
   margin-top: 5vh;
 }
@@ -53,6 +58,114 @@ a{color: white;}
   font-size: 6.2500vw;
   padding-right: 5.0000vw;
 }
+
+
+/* 모 달 */
+.modalBold{
+  font-weight: 700;
+}
+.modal{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background:transparent;
+  z-index: 999;
+  overflow: scroll;
+}
+.modal::-webkit-scrollbar{
+  display: none;
+}
+.modal{
+  -ms-overflow-style: none;
+}
+.modal_ex{
+  margin-top: 2vh;
+}
+.modal_ex span{
+  display: block;
+  width: 90%;
+  line-height: 1.5em;
+}
+.modalClose{
+  margin-top: 4.8vh;
+  background: transparent;
+  border: none;
+  margin-bottom: 10vh;
+}
+.modalClose i{
+  float: right;
+}
+.modal_container{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  background-color: #fda54e;
+  display: flex;
+}
+.modal_overlay{
+  background-color: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+}
+.modal_hidden{
+  display: none;
+}
+.modal_poster img{
+  width: 60.6250vw;
+  margin-bottom: 4vh;
+}
+.modal_left::-webkit-scrollbar{
+  display: none;
+}
+.modal_left{
+  width: 10%;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4vh;
+  display: flex;
+  flex-direction: column;
+}
+.modal_right{
+  margin-left: calc(100% - 90%);
+  width: 80%;
+  height: 2000px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4vh;
+  align-items: center;
+}
+.modal_right::-webkit-scrollbar{
+  display: none;
+}
+.modal_text{
+  padding-left: 10px;
+  font-size: 2.9vw;
+}
+.modal_period{
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  width: 100%;
+  height: auto;
+  font-size: 12px;
+}
+.modal_text div{
+  margin-bottom: 1.4vh;
+}
+.modal_title{
+  font-size: 6.2500vw;
+  padding-bottom: 4vh;
+  overflow: hidden;
+}
+.modal_title .modal_maintitle{
+  font-weight: 600;
+}
+.modal_maincontent::-webkit-scrollbar{
+  display: none;
+}
+
 /* 1. Mobile First CSS */
 
   /* 1. 헤더 */
@@ -235,7 +348,14 @@ a{color: white;}
   .swiper-wrapper div{
     width: 56.2500vw;
   }
+  .now_poster{
+    height: 42vh;
+    overflow: hidden;
+    position: relative;
+  }
   .now_poster img{
+    position: absolute;
+    bottom: 0;
     width: 56.2500vw;
   }
   .now_maintitle{
@@ -408,6 +528,45 @@ a{color: white;}
   header nav .logo{
     margin-left: 30px;
   }
+  /* 모달 */
+  .modal{
+    overflow: hidden;
+  }
+  .modal_container{
+    top: 5vh;
+  }
+  .modal_container::-webkit-scrollbar{
+    display: none;
+  }
+  .modal_title{
+    font-size: 5.3vw;
+    margin-bottom: 3vh;
+  }
+  .modalClose{
+    width: 100%;
+    font-size: 23px;
+    padding-right: 0.6vw;
+  }
+  .modal_period{
+    font-size: 25px;
+  }
+  .modal_poster{
+    width: 100%;
+    position: relative;
+  }
+  .modal_text{
+    font-size: 2.2vw;
+  }
+  .modal_ex span{
+    line-height: 1.8em;
+  }
+  .modal_poster img{
+    position: inherit;
+    width: 50vw;
+    top: 0;
+    left: 8vw;
+  }
+  /* 끝 */
   /* 슬라이딩 메뉴 */
   .slide-menu{
     display: flex;
@@ -576,6 +735,21 @@ a{color: white;}
   .slid-menu__num div{
     font-size: 2vw;
   }
+  /* 모달 */
+  .modal_container{
+    top: 8vh;
+  }
+  .modal_period{
+    font-size: 30px;
+  }
+  .moda_text{
+    font-size: 1.8vw;
+  }
+  .modal_poster img{
+    width: 40vw;
+    left: 13vw;
+  }
+
   /* 현재전시 */
   .now_poster{
     margin-bottom: 1vh;
@@ -609,6 +783,25 @@ a{color: white;}
   .content__subtitle{
     font-size: 24px;
   }
+
+  /* 모달 */
+  .modal_title{
+    margin-bottom: 7vh;
+  }
+  .modal_container{
+    width: 70%;
+  }
+  .modal_title{
+    font-size: 4.6875vw;
+  }
+  .modal_poster img{
+    width: 35vw;
+    left: 10vw;
+  }
+  .modal_text{
+    font-size: 1.3vw;
+  }
+
   /* 슬리이딩 메뉴 */
   .slide-left{
     margin-top: 13.2vh;
@@ -663,6 +856,9 @@ a{color: white;}
   .slid-menu__num div{
     font-size: 1.0417vw;
   }
+  .slide-menu__search_mb{
+    display: none;
+  }
 
   /* 현재전시 */
   .Exhibition_container{
@@ -678,6 +874,9 @@ a{color: white;}
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+  }
+  .now_poster{
+    height: 600px;
   }
   .nowBtn{
     width: 10.4167vw;
@@ -701,7 +900,7 @@ a{color: white;}
     font-size: 1.3021vw;
   }
   .now_maintitle :first-child{
-    font-size: 1.93021vw;
+    font-size: 1.5vw;
   }
   .now_title button{
     font-size: 1.3021vw;
