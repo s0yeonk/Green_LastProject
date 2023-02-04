@@ -69,7 +69,6 @@
       const $viewList=document.querySelectorAll('.view-List');
       if($nowBtn){
         $nowBtn.forEach(item=>{
-          item.classList.remove('now_checked');
           item.addEventListener('click',e=>{
             item.classList.toggle('now_checked');
             $viewList.forEach(subitem=>{
