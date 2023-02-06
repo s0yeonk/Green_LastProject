@@ -311,7 +311,7 @@ a{color: white;}
   /* 3. 현재전시 */
   .nowEx_title{
     margin-top: 4vh;
-    margin-bottom: 3vh;
+
     display: flex;
     margin-left: 5.0000vw;
     color: #A9A9A9;
@@ -346,31 +346,32 @@ a{color: white;}
     margin-left: 5vw;
     overflow: visible;
   }
-  .swiper-wrapper div{
-    width: 56.2500vw;
+  .swiper-slide{
+    width: 240px;
   }
   .now_poster{
-    height: 42vh;
+    height: 390px;
     overflow: hidden;
     position: relative;
   }
   .now_poster img{
     position: absolute;
     bottom: 0;
-    width: 56.2500vw;
+    width: 240px;
   }
   .now_maintitle{
-    font-size: 4vw;
+    font-size: 2.9vw;
     margin-bottom: 1.4vh;
   }
   .now_maintitle :first-child{
-    font-size: 4.3vw;
+    font-size: 3.5vw;
     font-family: 'GmarketSansMedium';
     font-weight: 600;
     margin-bottom: 0.1vh;
+    margin-top: 1.5vh;
   }
   .now_title button{
-    font-size: 3.3vw;
+    font-size: 2.6vw;
     border:none;
     border-radius: 5px;
     padding-left: 3.1250vw;
@@ -673,18 +674,25 @@ a{color: white;}
   .swiper-wrapper{
     margin-left: 5vw;
   }
-  .swiper-wrapper div{
+  .swiper-slide{
     font-size: 2.9vw;
-    width: 41vw;
+    width: 300px;
+  }
+  .now_poster{
+    height: 450px;
   }
   .now_poster img{
-    width: 41vw;
+    width: 300px;
+  }
+  .now_maintitle{
+    font-size: 2.1vw;
   }
   .now_maintitle :first-child{
-    font-size: 3.4vw;
+    font-size: 3vw;
+    margin-top: 1vh;
   }
   .now_title button{
-    font-size: 2.9vw;
+    font-size: 2vw;
   }
 
   /* 투표 */
@@ -752,23 +760,30 @@ a{color: white;}
   }
 
   /* 현재전시 */
+  .swiper{
+    margin-top: 3vh;
+  }
   .now_poster{
+    height: 500px;
     margin-bottom: 1vh;
   }
-  .swiper-wrapper div{
-    width: 28vw;
+  .swiper-slide{
+    width: 330px;
+    height: 700px;
     font-size: 2vw;
   }
   .now_poster img{
-    width: 28vw;
+    width: 330px;
   }
-
+  .now_maintitle{
+    font-size: 1.7vw;
+  }
   .now_maintitle :first-child{
-    font-size: 2.4vw;
+    font-size: 1.9vw;
     margin-bottom: .5vh;
   }
   .now_title button{
-    font-size: 2vw;
+    font-size: 18px;
   }
 }
 
@@ -822,6 +837,7 @@ a{color: white;}
     font-size: 1.2500vw;
   }
   .slide-menu__close_pc{
+    font-size: 2.5vw;
     margin-right: 6.2500vw;
   }
   .slide-menu__menu ul{
@@ -876,9 +892,7 @@ a{color: white;}
     align-items: flex-end;
     justify-content: flex-end;
   }
-  .now_poster{
-    height: 600px;
-  }
+
   .nowBtn{
     width: 10.4167vw;
     padding-bottom: 2vh;
@@ -893,15 +907,22 @@ a{color: white;}
     padding-left: 0;
     width: 100%;
   }
-  .now_poster img{
-    width: 20.8333vw;
+  .now_poster{
+    height: 500px;
   }
-  .swiper-wrapper div{
-    width: 20.8333vw;
+  .now_poster img{
+    width: 335px;
+  }
+  .swiper-slide{
+    width: 335px;
+    height: auto;
     font-size: 1.3021vw;
   }
   .now_maintitle :first-child{
     font-size: 1.5vw;
+  }
+  .now_maintitle :nth-child(2){
+    font-size: 1.4vw;
   }
   .now_title button{
     font-size: 1.3021vw;
@@ -925,6 +946,46 @@ a{color: white;}
     transition: width .3s;
     color: black;
   }
+
+  /* 투표 */
+  .vote__container{
+    height: 70vh;
+  }
+  .vote__one{
+    top: 70%;
+    transition: all .2s;
+    left: 9vw;
+  }
+  .vote__one img{
+    width: 23vw;
+  }
+  .vote__one:hover{
+    z-index: 9;
+  }
+  .vote__two{
+    top: 70%;
+    transition: all .2s;
+    left: 30vw;
+  }
+  .vote__two img{
+    width: 25vw;
+  }
+  .vote__three{
+    top: 70%;
+    left: 45vw;
+    transition: all .2s;
+  }
+  .vote__three img{
+    width: 28vw;
+  }
+  .vote__three:hover{
+    top: 50%;
+    z-index: 9;
+  }
+  .vote__two:hover{
+    top: 50%;
+  }
+
   /*아코디언*/
   .acc_title{padding-left: 1.3021vw;}
   .accordion{
@@ -937,5 +998,29 @@ a{color: white;}
   }
   .archive_text{
     font-size: 1.3021vw;
+  }
+}
+@media(min-width:1600px){
+  .vote__container{
+    height: 50vh;
+  }
+  .vote__one{
+    left: 13vw;
+  }
+  .vote__one img{
+    width: 20vw;
+  }
+  .vote__one:hover{
+    top: 25%;
+  }
+
+  .vote__two img{
+    width: 20vw;
+  }
+  .vote__two:hover{
+    top: 25%;
+  }
+  .vote__three:hover{
+    top: 30%;
   }
 }

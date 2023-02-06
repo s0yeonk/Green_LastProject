@@ -14,6 +14,39 @@
     })
   } 
 
+  //타이핑효과
+  const $typingContent="도시의 문화적 수준을 보여주는 곳,";
+  const $typingText=document.querySelector('.typing_effect');
+  let indexText=0; //문자열 하나하나에 접근하기 위해 사용하는 숫자형 데이터 
+
+  function typing(){
+    $typingText.textContent+=$typingContent[indexText++];
+    if(indexText>$typingContent.length){
+      $typingText.textContent=""
+      indexText=0;
+    }
+  }
+  setInterval(typing,300); // 두개의 인자 (주기적으로 동작시키고 싶은 함수이름, 함수동작주기) 
+
+  //스크롤 이벤트 (opacity)
+  let observer= new IntersectionObserver((e)=>{
+    e.forEach((box)=>{
+      if(box.isIntersecting){
+        box.target.style.opacity=1;
+      }else{
+        box.target.style.opacity=0;
+      }
+    })
+  })
+  let $observeItem=document.querySelectorAll('.observeItem');
+  console.log($observeItem);
+  console.log($observeItem[0]);
+  observer.observe($observeItem[0])
+  observer.observe($observeItem[1])
+  observer.observe($observeItem[2])
+
+
+  // 스와이퍼 1
   const swiper = new Swiper('.swiper', {
     // Optional parameters
     loop: true,

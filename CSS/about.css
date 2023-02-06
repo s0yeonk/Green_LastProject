@@ -21,7 +21,9 @@
 .Bebas{font-family: 'Bebas Neue', cursive; }
 a{color: white;}
 .view_none{display: none;}
-
+.bolder{
+  font-weight: 600;
+}
 /* 모바일 메뉴 */
 .sticky_menu{
   width: 100%;
@@ -53,6 +55,11 @@ a{color: white;}
   padding-right: 5.0000vw;
 }
 
+/*obsereve*/
+.observeItem{
+  opacity: 0;
+  transition: all 1s;
+}
 /* 슬라이딩메뉴  */
 .slide_logo{
   width: 37.1875vw;
@@ -197,9 +204,9 @@ a{color: white;}
 }
 .gnb{
   width: 100%;
-  height: 11.8vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 5vw;
 }
 .gnb button{
   font-size: 3.7500vw;
@@ -211,31 +218,33 @@ a{color: white;}
   
 }
 .dam_first{
+  margin-top: 5vh;
   margin-bottom:3vh;
 }
 .first_title{
   width: 100vw;
   height: 10vh;
   position: relative;
-  margin-bottom: 5vh;
   overflow: hidden;
-}
-.first_title div{
-  position: absolute;
   text-align: center;
 }
+
 .first_title :nth-child(1){
   font-size: 5.0000vw;
-  width: 100%;
-  top: 10%;
-  left: 0;
+  display: inline-block;
   padding-bottom: 1vh;
-  animation: text2 1s 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+  /* animation: text2 1s 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) both; */
+}
+.typing_effect{
+  padding-right: 5px;
+  border-right: .05em solid black;
+  animation: cursor 0.3s ease infinite;
+}
+@keyframes cursor{
+  50%{border-color: transparent;}
 }
 .first_title :nth-child(2){
   width: 100%;
-  top: 50%;
-  left: 0;
   font-size: 5.6250vw;
   font-weight: 700;
   animation: text2 1s 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) both;
@@ -251,6 +260,7 @@ a{color: white;}
   gap:6vw;
   height: 20vh;
   overflow: hidden;
+  margin-bottom: 5vh;
 }
 .first_logo img{
   width: 15.625vw;
@@ -295,6 +305,9 @@ width: 18.1250vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  gap: 2vh;
 }
 .dam_second_first :nth-child(1){
   font-size:4.3750vw;
@@ -310,16 +323,21 @@ width: 18.1250vw;
   margin-bottom: 3vh;
 }
 .dam_second_first :nth-child(3){
+  width: 80vw;
   display: flex;
   justify-content: center;
   margin-bottom: 5vh;
+  background:url();
 }
 .dam_second_first :nth-child(3) img{
   width: 80vw;
+  border-radius: 10px;
 }
 .swiper {
   width: 100vw;
-  height: 80px;
+  height: 50vh;
+  /* height: 80px; */
+  background: url('/image/종이질감2.png');
 }
 .swiper-wrapper{
   overflow: visible;
@@ -336,7 +354,9 @@ width: 18.1250vw;
 .swiperContent{
   width: 90vw;
   background: url('/image/로고/자산\ 7.svg');
-  background-size: cover;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
   font-weight: 500;
   text-align: center;
   font-size: 12px;
@@ -518,6 +538,15 @@ width: 18.1250vw;
   .gnb button{
     font-size: 2.6042vw;
   }
+  .dam_first{
+    height: 100%;
+  }
+  .first_title{
+    height: 14vh;
+  }
+  .first_logo{
+    margin-top: 4vh;
+  }
   .first_title :nth-child(1){
     font-size: 3.9063vw;
   }
@@ -526,6 +555,7 @@ width: 18.1250vw;
   }
   .dam_second_first :nth-child(1){
     font-size: 3.9063vw;
+    margin-bottom: 3vh;
   }
   .dam_second_first :nth-child(2){
     font-size: 2.6042vw;
@@ -534,11 +564,11 @@ width: 18.1250vw;
     font-size: 5.2083vw;
   }
   .swiper{
-    height: 140px;
+    /* height: 140px; */
   }
   .swiperContent{
     font-size: 4.0365vw;
-    height: 4.4vh;
+    /* height: 4.4vh; */
     line-height: 55px;
   }
   .swiperSection_subtitle{
@@ -554,6 +584,13 @@ width: 18.1250vw;
   .dam_second{
     margin-bottom: 10vh;
   }
+  .fist_logo{
+    margin-bottom: 5vh;
+  }
+  .first_images{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  } 
 }
 
 /* 가로해상도 1024px 이상_Desktop */
@@ -585,6 +622,29 @@ width: 18.1250vw;
   }
   .slid-menu__num div{
     font-size: 2vw;
+  }
+  /* 상단 메뉴 */
+  .gnb{
+    height: 11vh;
+  }
+  .gnb button{
+    font-size: 2.3vw;
+  }
+  /* 1. 대구미술관 */
+  .first-title{
+    height: 16vh;
+    margin-bottom: 3vh;
+  }
+  .first_title :nth-child(1){
+    font-size: 2.9297vw;
+    margin-bottom: 2vh;
+  }
+  .firts_title :nth-child(2){
+    font-size: 3.9063vw;
+  }
+  .first_logo{
+    height: 24vh;
+    margin-bottom: 6vh;
   }
 }
 @media (min-width:1280px){
@@ -646,4 +706,33 @@ width: 18.1250vw;
     display: none;
   }
 
+  /* 1. 미술관 소개 */
+  .gnb button{
+    font-size: 1.8vw;
+  }
+  .first_title{
+    height: 23vh;
+  }
+  .first_title :nth-child(1){
+    font-size: 2vw;
+  }
+  .first_title :nth-child(2){
+    font-size: 4.3vw;
+  }
+  .first_logo{
+    height: 30vh;
+  }
+  .first_logo :nth-child(1){
+    width: 10vw;
+  }
+  .first_logo img{
+    width: 11vw;
+  }
+
+  .dam_second_first :nth-child(1){
+    font-size: 2.5vw;
+  }
+  .dam_second_first :nth-child(2){
+    font-size: 1.8vw;
+  }
 }
