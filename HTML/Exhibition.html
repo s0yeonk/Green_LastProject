@@ -18,7 +18,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
   </style>
 </head>
-<body>
+<body style="overflow-x:hidden;">
   <!-- 모바일 Nav-->
   <div class="sticky_menu">
     <div class="sticky_left">
@@ -51,7 +51,7 @@
         </div>
         <div class="modal_maincontent">
           <div class="modal_poster">
-            <img src="/image/포스터/다니엘뷔렌2.png" alt="">
+            <img src="/LastProject/image/포스터/다니엘뷔렌2.png" alt="">
           </div>
           <div class="modal_text">
             <div><span class="modalBold">전시기간: </span>2022.07.12(화)~2023.02.28(화)</div>
@@ -72,12 +72,192 @@
             </div>
             <div class="ex_img">
               <div class="modal_sub modalBold">작품이미지</div>
+              <div>
+                <div class="swiper modal_swiper">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <img src="/LastProject/image/뷔렌/1.jpeg" alt="다니엘뷔렌 전시 이미지1">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/LastProject/image/뷔렌/2.jpeg" alt="다니엘뷔렌 전시 이미지2">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/LastProject/image/뷔렌/3.jpeg" alt="다니엘뷔렌 전시 이미지3">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/LastProject/image/뷔렌/4.jpeg" alt="다니엘뷔렌 전시 이미지4">
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="ex_goods">
-              <div class="modal_sub modalBold">전시굿즈</div>
+              <div class="ex_goods_top">
+                <div class="modal_sub modalBold">전시굿즈</div>
+                <div><a href="#">온라인스토어 바로가기</a></div>
+              </div>
+              <div class="ex_goodsImg">
+                <div class="swiper modal_swiper">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <img src="/LastProject/image/굿즈/뷔렌도록.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/LastProject/image/굿즈/뷔렌스티커.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="ex_recommendation">
-              <div class="modal_sub modalBold">추천전시</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--투표 모달창 -->
+  <div class="vote_modal1 modal_hidden">
+    <div class="vote_modal_overlay"></div>
+    <div class="votemodal_container">
+      <button class="voteClose">
+        <i class="fa-solid fa-x"></i> 
+      </button>
+      <div class="vote_top">
+        <div class="vote_title">
+          <div>사이의 공간: 한국 근대미술</div>
+          <div>이쾌대 푸른 두루마기를 입은 자화상 </div>
+        </div>
+      </div>
+      <div class="vote_bottom">
+        <div class="vote_img">
+          <img src="/LastProject/image/vote/나혜석.png" alt="">
+        </div>
+        <div class="vote_ex">
+          <div >
+            <div><푸른두루마기를 입은 자화상>은 전문적 화가로서 자신의 정체성을 표현한 작품입니다. 그의 작품에는 서양적인 것과 한국적인 것이 공존한다는 점이 특징인데요 이번 전시는 1897년부터 1965년까지의 시기인 한국 격동의 시대에서 태어난 나혜석, 김환기, 이중섭, 고희동 등한국 근대 작가들이 총 망라된 나혜석, 김환기, 이중섭, 고희동 등 한국의 근대 미술작품을 대구미술관에서 만나보시겠습니까?</div>
+          </div>
+          <div class="vote_select vote_pc">
+            <div>이 작품을 선택하시겠습니까?</div>
+            <div class="voteIcon">
+              <div>
+                <button>
+                  <i class="fa-solid fa-check"></i>
+                </button>
+                <span>투표하기</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="vote_select vote_mobile">
+          <div>이 작품을 선택하시겠습니까?</div>
+          <div class="voteIcon">
+            <div>
+              <button>
+                <i class="fa-solid fa-check"></i>
+              </button>
+              <span>투표하기</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vote_modal2 modal_hidden">
+    <div class="vote_modal_overlay"></div>
+    <div class="votemodal_container">
+      <button class="voteClose voteClose2 ">
+        <i class="fa-solid fa-x"></i> 
+      </button>
+      <div class="vote_top">
+        <div class="vote_title">
+          <div>박서희 개인전</div>
+          <div>조선 백자의 현대화  </div>
+        </div>
+      </div>
+      <div class="vote_bottom">
+        <div class="vote_img">
+          <img src="/LastProject/image/vote/박서희도예가.png" alt="">
+        </div>
+        <div class="vote_ex">
+          <div >
+            <div>서울대학교 미술대학 디자인학부와 동 대학원에서 도예를 전공한 박서희 작가는 전통 유물에서 모티브를 얻고 형태나 장식을 현대적으로 재해석하는 과정을 통해 현대인들의 정서에 부합하는 도자기를 제작하고자 노력하고 있습니다. 박서희 작가는 '조선 백자의 현대화'를 작업의 화두로 삼아 활동하고 있습니다. 순도 높은 백색 흙 위에 물과 나뭇잎을 연상시키는 푸른 빛깔의 유약을 입히는 과정을 거쳐 완성된 아름다운 작품을 대구미술관에서 만나보시겠습니까?</div>
+          </div>
+          <div class="vote_select vote_pc">
+            <div>이 작품을 선택하시겠습니까?</div>
+            <div class="voteIcon">
+              <div>
+                <button>
+                  <i class="fa-solid fa-check"></i>
+                </button>
+                <span>투표하기</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="vote_select vote_mobile">
+          <div>이 작품을 선택하시겠습니까?</div>
+          <div class="voteIcon">
+            <div>
+              <button>
+                <i class="fa-solid fa-check"></i>
+              </button>
+              <span>투표하기</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vote_modal3 modal_hidden">
+    <div class="vote_modal_overlay"></div>
+    <div class="votemodal_container">
+      <button class="voteClose voteClose3">
+        <i class="fa-solid fa-x"></i> 
+      </button>
+      <div class="vote_top">
+        <div class="vote_title">
+          <div>김준수 개인전</div>
+          <div>Time Fo/r/est</div>
+        </div>
+      </div>
+      <div class="vote_bottom">
+        <div class="vote_img">
+          <img src="/LastProject/image/vote/김준수1.png" alt="">
+        </div>
+        <div class="vote_ex">
+          <div >
+            <div>가죽으로 오브제를 빚는 김준수 작가의 작품입니다. 나이테를 닮아 얼핏 보면 나무인가 싶지만 가죽 공예품으로 레더 볼 시리즈는 나무의 결을 만들려고 의도한 것은 아니었습니다. 가죽의 특성을 극대화 할 수 있는 방법을 사용하여 가죽에 화학처리를 하지 않고 자연적 마감인 옻칠을 통해 만들어 낸 작품입니다. 김준수 작가의 작품을 대구 미술관에서 만나보시겠습니까?</div>
+          </div>
+          <div class="vote_select vote_pc">
+            <div>이 작품을 선택하시겠습니까?</div>
+            <div class="voteIcon">
+              <div>
+                <button>
+                  <i class="fa-solid fa-check"></i>
+                </button>
+                <span>투표하기</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="vote_select vote_mobile">
+          <div>이 작품을 선택하시겠습니까?</div>
+          <div class="voteIcon">
+            <div>
+              <button>
+                <i class="fa-solid fa-check"></i>
+              </button>
+              <span>투표하기</span>
             </div>
           </div>
         </div>
@@ -88,7 +268,7 @@
   <header>
     <div class="header_container">
       <div class="header__logo">
-        <img src="/image/로고/logo.png" alt="">
+        <img src="/LastProject/image/로고/logo.png" alt="">
       </div>
       <div class="header__icons">
         <div class="search">
@@ -103,7 +283,7 @@
       <div class="slide-left">
         <div class="slide-menu__top">
           <div>
-            <img class="slide_logo" src="/image/로고/logo_W.svg" alt="">
+            <img class="slide_logo" src="/LastProject/image/로고/logo_W.svg" alt="">
           </div>
           <span class="slide-menu__close Bebas">close</span>
         </div>
@@ -115,7 +295,7 @@
         </div>
         <div class="slide-menu__poster">
           <div class="slide_poster">
-            <img src="/image/포스터/이배/이배포스터(세로).png" alt="">
+            <img src="/LastProject/image/포스터/이배2.png" alt="">
           </div>
           <div class="slide_tag">
             <div>#이배</div>
@@ -163,21 +343,23 @@
   </header>
   <!-- header END -->
 
+<div id="NowExhibition">
   <!-- 현재전시 :슬라이드-->
   <div class="Exhibition_container">
     <div id="Now_Exhibition">
       <div class="nowEx_title">
         <div class="nowBtn Bebas" data-view="A">WHAT'S ON</div>
-        <div class="nowBtn Bebas" data-view="B">EVENTS</div>
-        <div class="nowBtn Bebas" data-view="C">ALL</div>
+        <div class="nowBtn Bebas black" data-view="B">EVENTS</div>
+        <div class="nowBtn Bebas black" data-view="C">ALL</div>
       </div>
-      <div>
+  
+      <div style="overflow:hidden;">
         <div class="on__content view-List" data-view="A">
           <div class="swiper first-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="now_poster">
-                  <img src="/image/포스터/다니엘뷔렌2.png" alt="">
+                  <img src="/LastProject/image/포스터/다니엘뷔렌2.png" alt="">
                 </div>
                 <div class="now_title">
                   <div class="now_maintitle">
@@ -189,7 +371,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="now_poster">
-                  <img src="/image/포스터/히토슈타이얼.png" alt="">
+                  <img src="/LastProject/image/포스터/히토슈타이얼.png" alt="">
                 </div>
                 <div class="now_title">
                   <div class="now_maintitle">
@@ -201,7 +383,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="now_poster">
-                  <img src="/image/포스터/이배2.png" alt="">
+                  <img src="/LastProject/image/포스터/이배2.png" alt="">
                 </div>
                 <div class="now_title">
                   <div class="now_maintitle">
@@ -213,12 +395,12 @@
               </div>
               <div class="swiper-slide">
                 <div class="now_poster">
-                  <img src="/image/포스터/히토슈타이얼.png" alt="">
+                  <img src="/LastProject/image/포스터/정광호/정광호.jpg" alt="">
                 </div>
                 <div class="now_title">
                   <div class="now_maintitle">
-                    <div>다니엘뷔렌</div>
-                    <div>2022.07.12-2023.02.28</div>
+                    <div>정광호</div>
+                    <div>2023.02.04-2023.04.03</div>
                   </div>
                   <button>더보기</button>
                 </div>
@@ -231,7 +413,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="now_poster">
-                  <img src="/image/포스터/뷔렌굿즈포스터.gif" alt="">
+                  <img src="/LastProject/image/포스터/뷔렌굿즈포스터.gif" alt="">
                 </div>
                 <div class="now_title">
                   <div class="now_maintitle">
@@ -243,7 +425,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="now_poster">
-                  <img src="/image/포스터/캘린더나눔.png" alt="">
+                  <img src="/LastProject/image/포스터/캘린더나눔.png" alt="">
                 </div>
                 <div class="now_title">
                   <div class="now_maintitle">
@@ -255,7 +437,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="now_poster">
-                  <img src="/image/포스터/이벤트3.png" alt="">
+                  <img src="/LastProject/image/포스터/이벤트3.png" alt="">
                 </div>
                 <div class="now_title">
                   <div class="now_maintitle">
@@ -267,7 +449,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="now_poster">
-                  <img src="/image/포스터/이벤트4.png" alt="">
+                  <img src="/LastProject/image/포스터/이벤트4.png" alt="">
                 </div>
                 <div class="now_title">
                   <div class="now_maintitle">
@@ -285,7 +467,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="now_poster">
-                  <img src="/image/포스터/이배2.png" alt="">
+                  <img src="/LastProject/image/포스터/이배2.png" alt="">
                 </div>
                 <div class="now_title">
                   <div class="now_maintitle">
@@ -297,7 +479,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="now_poster">
-                  <img src="/image/포스터/캘린더나눔.png" alt="">
+                  <img src="/LastProject/image/포스터/캘린더나눔.png" alt="">
                 </div>
                 <div class="now_title">
                   <div class="now_maintitle">
@@ -309,7 +491,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="now_poster">
-                  <img src="/image/포스터/다니엘뷔렌2.png" alt="">
+                  <img src="/LastProject/image/포스터/다니엘뷔렌2.png" alt="">
                 </div>
                 <div class="now_title">
                   <div class="now_maintitle">
@@ -321,7 +503,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="now_poster">
-                  <img src="/image/포스터/뷔렌굿즈포스터.gif" alt="">
+                  <img src="/LastProject/image/포스터/뷔렌굿즈포스터.gif" alt="">
                 </div>
                 <div class="now_title">
                   <div class="now_maintitle">
@@ -335,26 +517,35 @@
           </div>
         </div>
       </div>
+      
     </div>
   </div>
   <!-- 슬라이드 END -->
   <!-- 예정전시 :호버-->
-  <div class="Upcoming_container ct_margin">
-    <div class="content__title Bebas center">UPCOMING</div>
+  <div class="Upcoming_container ct_margin" onmouseover="body.style.backgroundColor='#fff'">
+    <div class="content__title Bebas center up">UPCOMING</div>
     <div class="upcoming__content">
-      <div class="swiper second-swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper upcoming-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide upcoming-item">
-            <img src="/image/포스터/키시오스가_예정/키시오스가.jpg" alt="">
+      <div class="cardcontainer">
+        <div class="thecard">
+          <div class="thefront">
+            <img src="/LastProject/image/포스터/키시오스가_예정/키시오스가.jpg" alt="">
           </div>
-          <div class="swiper-slide upcoming-item">
-            <img src="/image/포스터/키시오스가_예정/키시오스가.jpg" alt="">
+          <div class="theback">
+            <div>
+              <h1>2023/03/15</h1>
+              <h3>KISHIO SUGA</h3>
+              <p>대구미술관 4,5전시실</p>
+              <a href="#">자세히보기</a>
+            </div>
           </div>
-          <div class="swiper-slide upcoming-item">
-            <img src="/image/포스터/키시오스가_예정/키시오스가.jpg" alt="">
+        </div>
+      </div>
+      <div class="cardcontainer">
+        <div class="thecard">
+          <div class="thefront">
+            <img src="/LastProject/image/포스터/정다혜.jpg" alt="">
           </div>
+          <div class="theback">back of card</div>
         </div>
       </div>
     </div>
@@ -362,31 +553,33 @@
   <!-- 예정전시 END -->
 
   <!-- 작품투표공간 -->
-  <div class="third__container ct_margin">
+  <div class="third__container ct_margin" onmouseover="body.style.backgroundColor='#fff'">
     <div class="third__content__title">
       <div class="content__title Bebas center">WHAT DO YOU<br> WANT TO SEE NEXT?</div>
       <div class="content__subtitle center">다음 시즌 대구미술관에서 보고싶은 작품을 투표해주세요!</div>
     </div>
-    <div class="vote__wrapper">
-      <div class="vote__container">
-        <div class="vote__one">
-          <img src="/image/vote/나혜석.png" alt="">
-        </div>
-        <div class="vote__two">
-          <img src="/image/vote/박서희도예가.png" alt="">
-        </div>
-        <div class="vote__three">
-          <img src="/image/vote/김준수1.png" alt="">
-        </div>
+  </div>
+  <div class="vote__wrapper" >
+    <div class="vote__container" >
+      <div class="vote__one vote_modalOpen1">
+        <img src="/LastProject/image/vote/나혜석.png" alt="" onmouseover="body.style.backgroundColor='#7DA796'">
+      </div>
+      <div class="vote__two vote_modalOpen2">
+        <img src="/LastProject/image/vote/박서희도예가.png" alt="" onmouseover="body.style.backgroundColor='#CADCF7'"> <!--onmouseout="body.style.backgroundColor='#fff'"-->
+      </div>
+      <div class="vote__three vote_modalOpen3">
+        <img src="/LastProject/image/vote/김준수1.png" alt="" onmouseover="body.style.backgroundColor='#E7AA6D'">
       </div>
     </div>
   </div>
   <!-- 작품투표공간 END -->
 
   <!-- 아카이브 :아코디언 -->
-  <div class="four__container ct_margin">
+  <div class="four__container ct_margin" onmouseover="body.style.backgroundColor='#fff'">
     <div class="content__title Bebas acc_title">DAEGU ART MUSEUM'S<br> ARCHIVE</div>
     <div class="accodion_menu">
+      <!--
+      <div>
       <button class="accordion Bebas">2022</button>
       <div class="panel">
           <div class="archive_item">
@@ -446,6 +639,7 @@
             <div class="archive_poster"></div>
           </div>
       </div>
+    </div>
       <button class="accordion Bebas">2021</button>
       <div class="panel">
           <div class="archive_item">
@@ -860,10 +1054,11 @@
           </div>
       </div>
       <button class="accordion Bebas" onclick="location.href='#'">ALL</button>
-    </div>
+    </div>-->
     </div>
   </div>
   <!-- 아카이브 END -->
+</div>
 
   <!-- Footer -->
 
@@ -873,6 +1068,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/a5b9adde5a.js" crossorigin="anonymous"></script>
 <script src="/LastProject/JS/Exhibition.js"></script>
+<script src="/LastProject/JS/archive.js"></script>
 <!-- <script src="/header/header.js"></script> -->
 <script src="/LastProject/footer/footer.js"></script>
 </html>

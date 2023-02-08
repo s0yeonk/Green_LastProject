@@ -20,6 +20,61 @@
   modalOverlay.addEventListener('click',closeModal);
   modalCloseBtn.addEventListener('click',closeModal);
 
+
+  //투표 모달
+   //1
+  const voteModalOpen=document.querySelector('.vote_modalOpen1');
+  const voteModalOpen2=document.querySelector('.vote_modalOpen2');
+  const voteModalOpen3=document.querySelector('.vote_modalOpen3');
+   //투표 open img
+  const voteModal=document.querySelector('.vote_modal1');
+  const voteModal2=document.querySelector('.vote_modal2');
+  const voteModal3=document.querySelector('.vote_modal3');
+  //투표 x 버튼
+  const voteClose=document.querySelector('.voteClose');
+  const voteClose2=document.querySelector('.voteClose2');
+  const voteClose3=document.querySelector('.voteClose3');
+  const openVote=()=>{
+    voteModal.classList.remove('modal_hidden');
+    document.getElementsByTagName('body')[0].style.background='#7DA796';
+    document.getElementsByTagName('body')[0].style.overflow='hidden';
+  };
+  const openVote2=()=>{
+    voteModal2.classList.remove('modal_hidden');
+    document.getElementsByTagName('body')[0].style.background='#CADCF7';
+    document.getElementsByTagName('body')[0].style.overflow='hidden';
+  };
+  const openVote3=()=>{
+    voteModal3.classList.remove('modal_hidden');
+    document.getElementsByTagName('body')[0].style.background='#E7AA6D';
+    document.getElementsByTagName('body')[0].style.overflow='hidden';
+  };
+  voteModalOpen.addEventListener('click',openVote);
+  voteModalOpen2.addEventListener('click',openVote2);
+  voteModalOpen3.addEventListener('click',openVote3);
+  const closeVote=()=>{
+    voteModal.classList.add('modal_hidden');
+    document.getElementsByTagName('body')[0].style.background='#FFFFFF';
+    document.getElementsByTagName('body')[0].style.overflow='auto';
+  }
+  const closeVote2=()=>{
+    voteModal2.classList.add('modal_hidden');
+    document.getElementsByTagName('body')[0].style.background='#FFFFFF';
+    document.getElementsByTagName('body')[0].style.overflow='auto';
+  }
+  const closeVote3=()=>{
+    voteModal3.classList.add('modal_hidden');
+    document.getElementsByTagName('body')[0].style.background='#FFFFFF';
+    document.getElementsByTagName('body')[0].style.overflow='auto';
+  }
+  voteClose.addEventListener('click',closeVote);
+  voteClose2.addEventListener('click',closeVote2);
+  voteClose3.addEventListener('click',closeVote3);
+  modalOverlay.addEventListener('click',closeVote);
+    //2
+
+
+
   // 상단 돋보기 _내려오는 검색창
   const searchIcon=document.querySelector('.search');
   const slideSearch=document.querySelector('.desk_search');
@@ -70,7 +125,6 @@
       if($nowBtn){
         $nowBtn.forEach(item=>{
           item.addEventListener('click',e=>{
-            item.classList.toggle('now_checked');
             $viewList.forEach(subitem=>{
               subitem.classList.toggle('v-none',subitem.dataset.view!==e.target.dataset.view);
             })
@@ -81,7 +135,8 @@
     //스와이퍼 
     const swiper1 = new Swiper('.first-swiper', {
       slidesPerView: "auto",
-      spaceBetween:10,
+      spaceBetween:20,
+
       pagination: {
         el: '.swiper-pagination',
       },
@@ -94,97 +149,61 @@
         }
       }
     });
-
-
-    // const swiper2 = new Swiper('.second-swiper', {
-    //   slidesPerView: "auto",
-    //   spaceBetween:12,
-    //   pagination: {
-    //     el: '.swiper-pagination',
-    //   }
-    // });
-var ww = window.innerWidth;
-var swiper2 = undefined;
-
-function initSwiper() {
-  if (ww < 768 && swiper2 == undefined) {
-    const swiper2 = new Swiper('.second-swiper', {
+      //모달스와이퍼
+    const swiper3 = new Swiper('.modal_swiper', {
+      // Optional parameters
       slidesPerView: "auto",
-      spaceBetween:12,
+      spaceBetween:15,
+      loop: true,
+      // If we need pagination
       pagination: {
         el: '.swiper-pagination',
+      },
+      breakpoints:{
+        768:{
+          spaceBetween:15,
+        },
+        1280:{
+          spaceBetween:25,
+        }
       }
-    });
-  } else if (ww >= 768 && swiper2 != undefined) {
-    swiper2.destroy();
-    swiper2 = undefined;
-  }
-}
-
-initSwiper();
-
-// $(window).on('resize', function () {
-//   ww = $(window).width();
-//   initSwiper();
-// });
-
-//     // const swiper2 = new Swiper('.second-swiper', {
-//     //   slidesPerView: "auto",
-//     //   spaceBetween:12,
-//     //   pagination: {
-//     //     el: '.swiper-pagination',
-//     //   }
-//     // });
+    });  
 
   
 
-  //아카이브 _ 아코디언
-  let accordion=document.getElementsByClassName('accordion')
-  for(let i=0;i<accordion.length;i++){
-    accordion[i].addEventListener('click',()=>{
-      accordion[i].classList.toggle('active');
-      let panel=accordion[i].nextElementSibling;
-      if(panel.style.maxHeight){
-      panel.style.maxHeight=null;
-      }else{
-        panel.style.maxHeight=panel.scrollHeight+"px";
-      }
-    });
-  }
 
 
+  // const accItem=document.getElementsByClassName('archive_item');
+  // console.log(accItem);
+  // let accordionItem=null;
 
-  const accItem=document.getElementsByClassName('archive_item');
-  console.log(accItem);
-  let accordionItem=null;
-
-  function getData(){
-    fetch('./archive.json')
-    .then(res=>res.json())
-    .then(result=>{
-      accordionItem=result;
-      makeList(result);
-      console.log(result);
-    });
-  }
-  function makeList(item){
-    accItem.innerHTML=null;
-    item.forEach((item)=>{
-      for(let i=0;i>accItem.length;i++){
-        const result=makeItem(item);
-        accItem[i].appendChild(result)
-      }
-    });
-  }
-  function makeItem(item){
-    const div=document.createElement('div');
-    div.classList.add('item');
+  // function getData(){
+  //   fetch('./archive.json')
+  //   .then(res=>res.json())
+  //   .then(result=>{
+  //     accordionItem=result;
+  //     makeList(result);
+  //     console.log(result);
+  //   });
+  // }
+  // function makeList(item){
+  //   accItem.innerHTML=null;
+  //   item.forEach((item)=>{
+  //     for(let i=0;i>accItem.length;i++){
+  //       const result=makeItem(item);
+  //       accItem[i].appendChild(result)
+  //     }
+  //   });
+  // }
+  // function makeItem(item){
+  //   const div=document.createElement('div');
+  //   div.classList.add('item');
   
-    div.innerHTML=`
-    <div>hi</div>
-    `;
-    return div;
-  }
+  //   div.innerHTML=`
+  //   <div>hi</div>
+  //   `;
+  //   return div;
+  // }
 
-  getData();
+  // getData();
 })();

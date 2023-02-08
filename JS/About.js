@@ -1,3 +1,4 @@
+
 (function(){
   'use strict';
 
@@ -43,10 +44,10 @@
   console.log($observeItem[0]);
   observer.observe($observeItem[0])
   observer.observe($observeItem[1])
-  observer.observe($observeItem[2])
 
 
   // 스와이퍼 1
+  
   const swiper = new Swiper('.swiper', {
     // Optional parameters
     loop: true,
@@ -63,6 +64,7 @@
     },
   
   });
+  
 // Initialize and add the map
 // Note: This example requires that you consent to location sharing when
 // prompted by your browser. If you see the error "The Geolocation service
@@ -70,53 +72,75 @@
 // locate you.
 let map, infoWindow;
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 6,
-  });
-  infoWindow = new google.maps.InfoWindow();
 
-  const locationButton = document.createElement("button");
+// function initMap(){
+//   var container = document.getElementById('map2'); //지도를 담을 영역의 DOM 레퍼런스
+//   var options = { //지도를 생성할 때 필요한 기본 옵션
+//     center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+//     level: 3 //지도의 레벨(확대, 축소 정도)
+//   };
 
-  locationButton.textContent = "Pan to Current Location";
-  locationButton.classList.add("custom-map-control-button");
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-  locationButton.addEventListener("click", () => {
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          };
+//   var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+// }
 
-          infoWindow.setPosition(pos);
-          infoWindow.setContent("Location found.");
-          infoWindow.open(map);
-          map.setCenter(pos);
-        },
-        () => {
-          handleLocationError(true, infoWindow, map.getCenter());
-        }
-      );
-    } else {
-      // Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
-    }
-  });
-}
+// function initMap2() {
+//   map = new google.maps.Map(document.getElementById("map"), {
+//     center: { lat: -34.397, lng: 150.644 },
+//     zoom: 6,
+//   });
+//   infoWindow = new google.maps.InfoWindow();
 
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(
-    browserHasGeolocation
-      ? "Error: The Geolocation service failed."
-      : "Error: Your browser doesn't support geolocation."
-  );
-  infoWindow.open(map);
-}
+//   const locationButton = document.createElement("button");
 
-window.initMap = initMap;
+//   locationButton.textContent = "Pan to Current Location";
+//   locationButton.classList.add("custom-map-control-button");
+//   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+//   locationButton.addEventListener("click", () => {
+//     // Try HTML5 geolocation.
+//     if (navigator.geolocation) {
+//       navigator.geolocation.getCurrentPosition(
+//         (position) => {
+//           const pos = {
+//             lat: position.coords.latitude,
+//             lng: position.coords.longitude,
+//           };
+
+//           infoWindow.setPosition(pos);
+//           infoWindow.setContent("Location found.");
+//           infoWindow.open(map);
+//           map.setCenter(pos);
+//         },
+//         () => {
+//           handleLocationError(true, infoWindow, map.getCenter());
+//         }
+//       );
+//     } else {
+//       // Browser doesn't support Geolocation
+//       handleLocationError(false, infoWindow, map.getCenter());
+//     }
+//   });
+// }
+
+// function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+//   infoWindow.setPosition(pos);
+//   infoWindow.setContent(
+//     browserHasGeolocation
+//       ? "Error: The Geolocation service failed."
+//       : "Error: Your browser doesn't support geolocation."
+//   );
+//   infoWindow.open(map);
+// }
+
+//window.initMap = initMap;
 })();
+
+function initMap(){
+  var container = document.getElementById('map2'); //지도를 담을 영역의 DOM 레퍼런스
+  var options = { //지도를 생성할 때 필요한 기본 옵션
+    center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+    level: 3 //지도의 레벨(확대, 축소 정도)
+  };
+
+  var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+}
+initMap();

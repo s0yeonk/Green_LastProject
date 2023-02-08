@@ -289,6 +289,7 @@ a{color: white;}
 }
 .first_images{
   width: 100vw;
+  /* height: 130px; */
   margin-bottom: 3vh;
 }
 .first_images div{
@@ -327,12 +328,15 @@ width: 18.1250vw;
   display: flex;
   justify-content: center;
   margin-bottom: 5vh;
-  background:url();
 }
-.dam_second_first :nth-child(3) img{
+.dam_viedo{
+  width: 80vw;
+  border-radius: 20px;
+}
+/* .dam_second_first :nth-child(3) img{
   width: 80vw;
   border-radius: 10px;
-}
+} */
 .swiper {
   width: 100vw;
   height: 50vh;
@@ -351,22 +355,34 @@ width: 18.1250vw;
 .swiper-slide{
   height: 100%;
 }
+.swiper-slide :nth-child(3){
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}
+.swiper-slide :nth-child(4){
+  font-weight: 600;
+  font-size: 14px;
+}
 .swiperContent{
   width: 90vw;
   background: url('/image/로고/자산\ 7.svg');
-  background-size: auto 100%;
+  background-size: 320px;
   background-repeat: no-repeat;
-  background-position-x: center;
-  font-weight: 500;
+  background-position: center;
+  font-weight: 600;
   text-align: center;
-  font-size: 12px;
-  line-height: 30px;
+  font-size: 14px;
+  line-height: 50px;
+  transition: all .2s;
 }
 
 .swiperSection_title{
   text-align: center;
   font-size: 6.2500vw;
   font-weight: 600;
+  margin-bottom: 1vh;
 }
 .swiperSection_subtitle{
   text-align: center;
@@ -379,9 +395,6 @@ width: 18.1250vw;
   margin-top: 1vh;
   font-size: 3.7625vw;
   font-weight: 500;
-}
-.swiperContent{
-  font-size: 3.7500vw;
 }
 .swiper-button-prev, .swiper-button-next{
   color:  black;
@@ -401,15 +414,28 @@ width: 18.1250vw;
 }
 
 /* 지도 */
-.DAM_Map{
+/* .DAM_Map{
   width: 100vw;
   height: 2000px;
 
-}
-#map{
+} */
+/* #map{
   height: 320px; width: 100%;
   border-bottom: 1px solid #000;
+} */
+
+@media (min-width:500px){
+  .swiperSection_title{
+    font-size: 34px;
+    margin-bottom: 3vh;
+  }
+  .swiperContent{
+    background-size: 450px;
+    font-size: 20px;
+    margin-bottom: 3vh;
+  }
 }
+
 /* 가로해상도가 768px이상 _tablet */
 @media (min-width:768px){ 
   .sticky_menu{
@@ -542,6 +568,7 @@ width: 18.1250vw;
     height: 100%;
   }
   .first_title{
+    margin-bottom: 5vh;
     height: 14vh;
   }
   .first_logo{
@@ -563,13 +590,16 @@ width: 18.1250vw;
   .swiperSection_title{
     font-size: 5.2083vw;
   }
-  .swiper{
-    /* height: 140px; */
-  }
   .swiperContent{
-    font-size: 4.0365vw;
-    /* height: 4.4vh; */
+    background-size: 650px;
+    font-size: 28px;
     line-height: 55px;
+  }
+  .swiper-button-prev, .swiper-button-next{
+    display: block;
+  }
+  .swiper-button-next::after, .swiper-button-prev::after{
+    font-size: 25px;
   }
   .swiperSection_subtitle{
     font-size: 3.6458vw;
@@ -646,10 +676,25 @@ width: 18.1250vw;
     height: 24vh;
     margin-bottom: 6vh;
   }
+
+  /* 스와이퍼 */
+  .swiperSection_title{
+    font-size: 4.5vw;
+  }
+  .swiperContent{
+    background-size: 700px;
+    font-size: 30px;
+  }
+  .swiper-slide :nth-child(3){
+    font-size: 22px;
+  }
+  .swiper-slide :nth-child(4){
+    font-size: 20px;
+  }
 }
 @media (min-width:1280px){
    /* 슬리이딩 메뉴 */
-   .slide-left{
+  .slide-left{
     margin-top: 13.2vh;
     padding-left: 7.8125vw;
   }
@@ -734,5 +779,14 @@ width: 18.1250vw;
   }
   .dam_second_first :nth-child(2){
     font-size: 1.8vw;
+  }
+
+  /* 스와이퍼 */
+  .swiperSection_title{
+    font-size: 4vw;
+  }
+  .swiperContent{
+    background-size: 750px;
+    font-size: 35px;
   }
 }

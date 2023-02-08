@@ -1,6 +1,6 @@
 <footer>
   <div class="logo">
-    <img src="/image/로고/logo_W.svg" alt="">
+    <img src="/LastProject/image/로고/logo_W.svg" alt="">
     <div class="newsletter_desk_container">
       <div class="news_title">
         <div class="title">NEWSLETTER</div>
@@ -10,7 +10,7 @@
       <div>
         <div>
           <form action="">
-            <input type="text" placeholder="Email address">
+            <input type="text" placeholder="Email address" id="userid">
           </form>
           <div class="news_sub">
             <div>구독</div>
@@ -23,6 +23,25 @@
         </div>
       </div>
     </div>
+    <script>
+      let userid = document.querySelector('#userid')
+      userid.addEventListener('change',(e)=>{  // html 의 onchange="validEmail(this)"와 동일 
+          validEmail(e.target)
+      })
+      function validEmail(obj){
+          console.log(obj)
+          if(validEmailCheck(obj)==false){
+              alert('올바른 이메일 주소를 입력해주세요.')
+              obj.value='';
+              obj.focus();
+              return false;
+          }
+      }
+      function validEmailCheck(obj){
+          var pattern = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+          return (obj.value.match(pattern)!=null)
+      }
+    </script>
     <div class="copyright_desk">
       <p>copyright</p>
       <p>DAEGU ARTMUSEUM.KOREA</p>
@@ -98,7 +117,7 @@
         </div>
       </div>
       <div class="map_img">
-        <img src="/image/footer_map.png" alt="map_img">
+        <img src="/LastProject/image/footer_map.png" alt="map_img">
       </div>
       <p class="map_mobile">대구광역시 수성구 미술관로 40<br>(삼덕동) 우편번호 42250</p>
     </div>

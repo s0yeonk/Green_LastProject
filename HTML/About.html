@@ -17,6 +17,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
   </style>
+ 
 </head>
 <body>
   <div>
@@ -166,7 +167,8 @@
               지역 미술의 역사와 미학을 연구하고, 이를 동시대 현대미술의<br>
               흐름과 연결하는 지역대표 미술플랫폼</span>으로 역할하고 있습니다. 
           </p>
-          <div class="observeItem">
+          <div>
+            <video class="dam_viedo"src="/image/videoplayback.mp4" type="video/mp4" muted autoplay loop></video>
             <!-- <img src="/image/About/대구미술관실내.jpeg" alt=""> -->
           </div>
         </div>
@@ -190,6 +192,7 @@
                 공간으로 자리매김하여 <br>
                 언제나 여러분과 함께 하겠습니다. 
               </div>
+              <div>대구미술관장</div>
             </div>
             <div class="swiper-slide">
               <div class="swiperSection_title">대구미술관은</div>
@@ -222,7 +225,8 @@
         <div></div>
       </div>
       <div class="viewList_about view_none DAM_Map" data-view="C">
-        <div id="map"></div>
+        <!-- <div id="map"></div> -->
+        <div id="map2" style="width:500px;height:400px;"></div>
         <div class="map_ex">
           <div>(우)42250 대구시 수성구 미술관로 40(삼덕동 374)(우)42250 대구시 수성구 미술관로 40(삼덕동 374)</div>
           <div>053-803-7900(대표전화)</div>
@@ -234,12 +238,10 @@
     <footer id="footer"></footer>
   </div>
 </body>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5b61cddef8e86a183dc0eb76cd56005d"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/a5b9adde5a.js" crossorigin="anonymous"></script>
 <script src="/LastProject/footer/footer.js"></script>
-<script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyslWFk4pQYwuoPoksSqWiSRpriX5G_bo&callback=initMap">
-</script>
 <script src="/LastProject/JS/About.js"></script>
 <script src="/LastProject/JS/header.js"></script>
 </html>

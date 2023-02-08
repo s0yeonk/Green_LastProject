@@ -21,10 +21,12 @@ header{
   align-items: flex-end;
   margin-right: 5vw;
   display: none;
+  cursor: pointer;
 }
 .header__icons .search{
   display: none;
 }
+
 .header__logo img{
   margin-left: 5vw;
 }
